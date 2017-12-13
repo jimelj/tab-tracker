@@ -5,26 +5,30 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
   },
   "author": "Jimel J. Joseph",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "joi": "^13.0.2",
+    "jsonwebtoken": "^8.1.0",
     "morgan": "^1.9.0",
-    "sequelize": "^4.24.0",
+    "sequelize": "^4.8.0",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {
+    "eslint": "^4.13.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint": "^4.12.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.5"
   }
 }
